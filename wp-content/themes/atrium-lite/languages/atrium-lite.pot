@@ -1,0 +1,208 @@
+# Copyright (C) 2021 Viva Themes
+# This file is distributed under the GNU GPLv3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Atrium Lite 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/atrium-lite\n"
+"POT-Creation-Date: 2021-01-25 11:09:25+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2021-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:14
+msgid "Oops! That page can&rsquo;t be found"
+msgstr ""
+
+#: archive.php:33
+msgid "Not Found"
+msgstr ""
+
+#. translators: %s: post title
+
+#: comments.php:21
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr ""
+
+#. translators: 1: number of comments, 2: post title
+
+#: comments.php:25
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:48
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:51
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:54
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:64
+msgid "Comments are closed."
+msgstr ""
+
+#: content.php:25
+msgid "Read more"
+msgstr ""
+
+#: footer.php:30
+msgid "Y"
+msgstr ""
+
+#: footer.php:30
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: footer.php:30
+msgid "Powered by %s."
+msgstr ""
+
+#: footer.php:30
+msgid "Theme by %1$s."
+msgstr ""
+
+#: functions.php:32
+msgid "Small"
+msgstr ""
+
+#: functions.php:37
+msgid "Regular"
+msgstr ""
+
+#: functions.php:42
+msgid "Large"
+msgstr ""
+
+#: functions.php:47
+msgid "Huge"
+msgstr ""
+
+#: functions.php:59
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:60
+msgid "Front Menu"
+msgstr ""
+
+#: functions.php:61
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:80
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:90
+msgid "Top Widget"
+msgstr ""
+
+#: functions.php:100
+msgid "Front Widget"
+msgstr ""
+
+#: functions.php:110
+msgid "Footer Widgets"
+msgstr ""
+
+#. translators: If there are characters in your language that are not supported
+#. 	   by this font, translate this to 'off'. Do not translate into your own
+#. language.
+
+#: functions.php:133
+msgctxt "Nunito font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/customizer.php:14
+msgid "Theme Options"
+msgstr ""
+
+#: inc/customizer.php:30
+msgid "Add copyright text in the footer."
+msgstr ""
+
+#: inc/extras.php:51
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/extras.php:53
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/extras.php:55
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: inc/extras.php:61
+msgid "Archives"
+msgstr ""
+
+#: inc/extras.php:68
+msgid "Skip to the content"
+msgstr ""
+
+#: inc/extras.php:78
+msgid "Thanks for installing Atrium Lite! Want more features?"
+msgstr ""
+
+#: inc/extras.php:78
+msgid "Check Out the Pro Version  &#8594;"
+msgstr ""
+
+#: index.php:33
+msgid "You don&#39;t have any posts yet."
+msgstr ""
+
+#: page.php:31 single.php:29 template-full-width.php:30 template-plain.php:21
+msgid "Pages:"
+msgstr ""
+
+#: search.php:15
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:35
+msgid "No results."
+msgstr ""
+#. Theme Name of the plugin/theme
+msgid "Atrium Lite"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://vivathemes.com/wordpress-theme/atrium/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Atrium Lite is a modern and clean business WordPress theme. This theme is beautifully designed, using the browser space entirely to make your website easy to read and focus. The theme comes with nice effects and layout that will help you build a professional website. In the front page you can display your blog, a default page with sidebar or a full width page. Easily upload your logo image and favicon, styling for Contact Form 7 plugin are among the features. For even more features check the Pro Version of this theme https://vivathemes.com/wordpress-theme/atrium/"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Viva Themes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://vivathemes.com"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full Width"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Plain Page"
+msgstr ""

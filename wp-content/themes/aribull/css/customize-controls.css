@@ -1,0 +1,8 @@
+#customize-theme-controls .control-section-aribull_button .accordion-section-title {
+	background-color: #4bc76b !important;
+}
+
+#customize-theme-controls .control-section-aribull_button .accordion-section-title a {
+	color: #000;
+	text-decoration: none;
+}
