@@ -1,0 +1,170 @@
+
+<html>
+	<head>
+		<title>New</title>
+		<script type="text/javascript">
+			function printChecked(){
+                var thisone = document.getElementById('services');
+                var serv = document.getElementById('serv');
+				var financials=document.getElementsByName('financial');
+				var financialItems=0;
+                var maxItem=0;
+                var allTypes="";
+                var allSelected=0;
+                var danger="";
+                var kind="";
+				for(var i=0; i<financials.length; i++){
+					if(financials[i].type=='checkbox' && financials[i].checked==true){
+                    financialItems+=1;
+                    allSelected+=1;
+                    }
+				}
+                var physicals=document.getElementsByName('physical');
+				var physicalItems=0;
+                for(var i=0; i<physicals.length; i++){
+					if(physicals[i].type=='checkbox' && physicals[i].checked==true){
+                    physicalItems+=1;
+                    allSelected+=1;}
+				}
+                var pychologicals=document.getElementsByName('pychological');
+				var pychologicalItems=0;
+                for(var i=0; i<pychologicals.length; i++){
+					if(pychologicals[i].type=='checkbox' && pychologicals[i].checked==true){
+                    pychologicalItems+=1;
+                    allSelected+=1;}
+				}
+                var verbals=document.getElementsByName('verbal');
+				var verbalItems=0;
+                for(var i=0; i<verbals.length; i++){
+					if(verbals[i].type=='checkbox' && verbals[i].checked==true){
+                    verbalItems+=1;
+                    allSelected+=1;}
+				}
+                maxItem = Math.max(financialItems, physicalItems, pychologicalItems, verbalItems);
+                var arr = [financialItems, physicalItems, pychologicalItems, verbalItems];
+                let isi = arr.indexOf(Math.max(...arr));
+                if(maxItem>=1){
+                    if (maxItem==1){
+                        danger= "The severity of your situation is: &#9733;<br>It is <strong>not clear</strong> whether you are in an abusive relationship or not. ";
+
+                    } else{
+                    serv.style.display = 'block';
+                    if(maxItem==financialItems){
+                        kind+="<br> Based of your selection you may be a victim of <strong> financial abuse</strong>, if your partner: <li> Prevents you from accessing your own money, benefits or assets <li> Takes out a loan that would affect you without your consent <li> Puts pressure on you in connection with loans, property or financial transactions<li> Denying assistance to manage/monitor financial affairs <li> Denying assistance to access benefits  <li> Misuse of any personal allowance, benefits or direct payments <li> False representation or using your bank account, cards or documents without you knowing<br> ";
+                    }
+                    if(maxItem==physicalItems){
+                    kind+="<br> Based on your selection you may be a victim of <strong> physical abuse</strong>, if you partner: <li>Restricts your movements (prevents you from attending work or school, controls what you do.<li>Harms other people or animals in the your life.<li>Makes you feel be in fear of disagreeing with your partner.<li>Forces you to drink alcohol or take drugs.<br> ";
+                    }
+                    if (maxItem==pychologicalItems){
+                    kind+="<br> Based of your selection you may be a victim of <strong> psychological abuse</strong>, if your partner: <li>Repeatedly gives you destructive criticism, verbal threats and browbeating.<li>Always claims to be right.<li>Excludes you from making decisions .<li>Does not respect your privacy. <li>Abuses your trust by lying, hiding important information and papers, cheating or being inappropriately jealous.<br> ";
+                    }
+                     if (maxItem==verbalItems){
+                    kind+=" <br> Based on your selection you may be a victim of <strong>verbal abuse</strong>, if your partner:<li> Makes remarks that are meant to make you feel bad about yourself and are not constructive, but deliberate and hurtful<li> Insults or attempts to humiliate you. Then they accuse you of being overly sensitive or say that it was a joke and you have no sense of humor.<li> Frequently yells or screams at you.<li> Blames you for starting arguments, when it was not the case.<li>Uses derogatory language, or insults that lowers your self-esteem, sense of self-worth, and self-concept.<br> ";
+                    }
+                    if (maxItem>=2 && maxItem<=3){
+                        danger= "<br>The severity of your situation is: &#9733;&#9733; <br> It it <strong>likely</strong> that you are in an abusive relationship with your partner.";
+                    }
+                    if (maxItem>=4){
+                        danger= "<br></br>The severity of your situation is: &#9733;&#9733;&#9733;<br> You are <strong>extremely likely</strong> to be in an abusive relationship.";
+                    }}
+                } else{
+                   kind+="You have not made any selections.";
+                }
+            document.getElementById("severity").innerHTML = danger;
+            document.getElementById("kind").innerHTML = kind;
+            if (thisone.style.display == 'none') {
+                    thisone.style.display = 'block';
+                } 
+            
+			}
+            function isEmpty(str) {
+                return (!str || str.length === 0 );
+            }			
+		</script>
+        <style>
+            label {
+               font-family: Helvetica; 
+               font-size: 17px;
+            }
+            input.checkbox {
+                transform: scale(1.4);
+                margin: 7px 20px 5px;
+            }
+            .button{
+                margin: 10px 20px;
+                width: 180px;
+            }
+            p {
+               margin: 5px; 
+            }
+            div.services {
+                margin: auto;
+                width:70%;
+                padding: 10px;
+                background-color: #FFFFFF;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+        </style>
+	</head>
+<body style="text-align: left; padding:10px;">
+	<h3>Has your partner done any of the following things?</h3>
+    <input type="checkbox" class="checkbox" name="physical" ><label for="checkbox">Pushed or shoved you?</label>
+    <br>
+	<input type="checkbox" class="checkbox" name="physical" ><label for="checkbox">Held you to keep you from leaving?</label>
+    <br>
+	<input type="checkbox" class="checkbox" name="physical" ><label for="checkbox">Slapped or bit you?</label>
+    <br>
+	<input type="checkbox" class="checkbox" name="physical" ><label for="checkbox">Kicked or choked you?</label> 
+    <br>
+	<input type="checkbox" class="checkbox" name="physical" ><label for="checkbox">Hit or punched you?</label>
+    <br>
+    <input type="checkbox" class="checkbox" name="pychological"><label for="checkbox">Ignored your feelings?</label>
+    <br>
+	<input type="checkbox" class="checkbox" name="pychological" ><label for="checkbox">Ridiculed or insulted your most valued beliefs? (i.e. religion, heritage, or class)</label>
+    <br>
+	<input type="checkbox" class="checkbox" name="pychological" ><label for="checkbox">Withheld approval, appreciation or affection as punishment?</label>
+    <br>
+	<input type="checkbox" class="checkbox" name="pychological" ><label for="checkbox">Insulted or drove away your friends or family?</label>
+    <br>
+	<input type="checkbox" class="checkbox" name="pychological" ><label for="checkbox">Humiliated you in private or public?</label>
+    <br>
+    <input type="checkbox" class="checkbox" name="verbal" ><label for="checkbox">Used words to shame you? These may be comments about the way you dress, talk, or your intelligence. </label>
+    <br>
+	<input type="checkbox" class="checkbox" name="verbal" ><label for="checkbox">Insulted in public by a peer, a friend, a family member?</label>
+    <br>
+	<input type="checkbox" class="checkbox" name="verbal" ><label for="checkbox">Criticize you?</label>
+    <br>
+	<input type="checkbox" class="checkbox" name="verbal" ><label for="checkbox">They yell, scream, or swear at you ?</label>
+    <br>
+	<input type="checkbox" class="checkbox" name="verbal" ><label for="checkbox">Make threats to you?</label>
+    <br>
+	<input type="checkbox" class="checkbox" name="financial" ><label for="checkbox">Stole your money or possessions?</label>
+    <br>
+	<input type="checkbox" class="checkbox" name="financial" ><label for="checkbox">Took part of fraud or scamming?</label>
+    <br>
+	<input type="checkbox" class="checkbox" name="financial" ><label for="checkbox">Denied assistance to manage/monitor your financial affairs?</label>
+    <br>
+	<input type="checkbox" class="checkbox" name="financial" ><label for="checkbox">Misused benefits or direct payments in the family home?</label>
+    <br>
+	<input type="checkbox" class="checkbox" name="financial" ><label for="checkbox">Prevented you from accessing your own money?</label>
+	<p>
+		<input class="button" onclick='printChecked()' value="Check your results"/>
+	</p>
+  
+    <div id="services" class="services" style="display:none">
+        <h3 style="text-align: center;">Your results:</h3>
+        <p id="kind"></p>
+        <p id="severity"></p>
+        <div id="serv" class="serv" style="display:none">
+        <p>What is next? The following services may help you with your situation.</p>
+        <p><a href="https://safehaven.ga/services" class="button" target="_blank">Services</a></p>
+        <p>Or you can choose to develop a self-care routine.</p>
+        <p><a href="https://safehaven.ga/self-care" class="button" target="_blank">Self-care routine</a></p>
+        <br></div>
+    </div>
+</div>
+
+
+</body>
+
+</html>

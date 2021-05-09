@@ -1,0 +1,139 @@
+<head>
+    <title> My self care routine</title>
+    <script>
+        function allowDrop(ev) {
+        ev.preventDefault();
+        }
+        function dragStart(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+        }
+        function dragDrop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+        }
+        </script>
+    <style>
+    
+    #square11, #square12, #square13, #square14, #square15 , #square16, 
+    #square17, #square18, #square19 , #square20, #square21, #square22, 
+    #square23, #square24, #square25, #square26, #square27, #square28, 
+     #square29, #square30, #square31, #square32 {
+    float: left;
+    margin: 5px;
+    padding: 10px;
+    width: 200px;
+    height: 25px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+    #square10{
+        float: left;
+    margin: 5px;
+    padding: 10px;
+    width:100%;
+    display: block;
+    overflow: auto;
+    background-color:rgb(217, 217, 250) ;
+    border-radius: 5px;
+    padding: 5px;
+    }
+
+    .box {
+     display: grid;
+     grid-gap: 5px;
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(280px, 4fr));
+    }
+    
+    #container1, #container2, #container3, #container4,
+    #container5, #container6, #container7, #container8 {
+    color:black;
+    margin: 5px;
+    border-radius: 15px;
+    padding: 10px;
+    border: 2px dashed #000000;
+    }
+    #container1 {
+        background-color:#f8f4f7 ;
+    }
+    #container2 {
+        background-color:#f4edf3 ;
+    }
+    #container3 {
+        background-color:#f1f7ec ;
+    }
+    #container4 {
+        background-color:#fffcf0 ;
+    }
+    #container5 {
+        background-color:#e3f2f9 ;
+    }
+    #container6 {
+        background-color:#f1f7ec ;
+    }
+    #container7 {
+        background-color:#fde9eb ;
+    }
+    #container8 {
+        background-color:#fffcf0 ;
+    }
+
+    h2 {
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+    }
+
+    </style>
+    </head>
+    <body>
+    <h2>My self-care routine</h2>
+    <div class = "box">
+        <div id="container1" ondrop="dragDrop(event)" ondragover="allowDrop(event)"> I can exercise my body by...
+        </div>
+    <div id="container2" ondrop="dragDrop(event)" ondragover="allowDrop(event)"> I can relax my body by...
+        </div>
+    <div id="container3" ondrop="dragDrop(event)" ondragover="allowDrop(event)"> Important people I trust
+        </div>
+    <div id="container4" ondrop="dragDrop(event)" ondragover="allowDrop(event)"> I can relax my mind by...
+        </div>
+    <div id="container5" ondrop="dragDrop(event)" ondragover="allowDrop(event)"> Things that make me feel good
+        </div>
+    <div id="container6" ondrop="dragDrop(event)" ondragover="allowDrop(event)"> I can nourish my body with...
+        </div>
+        <div id="container7" ondrop="dragDrop(event)" ondragover="allowDrop(event)"> Things I would like to achieve
+        </div>
+    <div id="container8" ondrop="dragDrop(event)" ondragover="allowDrop(event)">Things that make me a good friend
+        </div>
+    </div>
+    <div id="square10" ondrop="dragDrop(event)" ondragover="allowDrop(event)" name="name"> You can edit and drag&drop the following boxes:<br>
+        <div id="square11" draggable="true" ondragstart="dragStart(event)" contenteditable="true"> Meeting friends</div>
+        <div id="square12" draggable="true" ondragstart="dragStart(event)" contenteditable="true">Making...</div>
+        <div id="square13" draggable="true" ondragstart="dragStart(event)" contenteditable="true">Meditating</div>
+        <div id="square14" draggable="true" ondragstart="dragStart(event)" contenteditable="true">Running</div>
+        <div id="square15" draggable="true" ondragstart="dragStart(event)" contenteditable="true">Banana pancakes </div>
+        <div id="square16" draggable="true" ondragstart="dragStart(event)" contenteditable="true">Reading...</div>
+        <div id="square17" draggable="true" ondragstart="dragStart(event)" contenteditable="true">Hot showers</div>
+        <div id="square18" draggable="true" ondragstart="dragStart(event)" contenteditable="true">Listening to... </div>
+        <div id="square19" draggable="true" ondragstart="dragStart(event)" contenteditable="true"> </div>
+        <div id="square20" draggable="true" ondragstart="dragStart(event)" contenteditable="true"> </div>
+        <div id="square21" draggable="true" ondragstart="dragStart(event)" contenteditable="true"> </div>
+        <div id="square22" draggable="true" ondragstart="dragStart(event)" contenteditable="true"> </div>
+        <div id="square23" draggable="true" ondragstart="dragStart(event)" contenteditable="true"> </div>
+        <div id="square24" draggable="true" ondragstart="dragStart(event)" contenteditable="true"> </div>
+        <div id="square25" draggable="true" ondragstart="dragStart(event)" contenteditable="true"> </div>
+        <div id="square26" draggable="true" ondragstart="dragStart(event)" contenteditable="true"> </div>
+        <div id="square27" draggable="true" ondragstart="dragStart(event)" contenteditable="true"> </div>
+        <div id="square28" draggable="true" ondragstart="dragStart(event)" contenteditable="true"> </div>
+        <div id="square29" draggable="true" ondragstart="dragStart(event)" contenteditable="true"> </div>
+        <div id="square30" draggable="true" ondragstart="dragStart(event)" contenteditable="true"> </div>
+        <div id="square31" draggable="true" ondragstart="dragStart(event)" contenteditable="true"> </div>
+        <div id="square32" draggable="true" ondragstart="dragStart(event)" contenteditable="true"> </div>
+        </div>
+    </body>
+   
+    </html>
