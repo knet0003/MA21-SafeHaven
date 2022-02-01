@@ -23,5 +23,19 @@ answer and help for their problems.
 • Developing a self-care plan.
   Here the users will be given an option to develop a self-care plan. The users will be able to develop a short or long-time plan based on their choice. This plan
 would be aimed to help the user recover themselves. Users can create new activities and use drag and drop mechanism to design a plan.
+
+![111](https://user-images.githubusercontent.com/63653648/151895778-dad0f18d-0014-4461-abe2-f08b11b589cb.png)
+
  
+  # System Architecture
+The system is deployed in an AWS EC2 instance, the image used for it is ‘Bitnami WordPress’. The
+website was developed using the Bitnami WordPress stack that follows a “LAMP” structure,
+meaning that it uses a Linux operating system, Apache HTTP server, MySQL database and PHP
+programming language. In the front end, the web application uses HTML, CSS, and JS
+technologies. For the code that we made to create the self-care routine, we hosted it
+separately in an S3 storage, and therefore is called from the website. As data visualization we
+used Tableau.
+![112](https://user-images.githubusercontent.com/63653648/151895785-a2b0cad2-2335-4e3a-8a13-8d6d33890d2c.png)
+
+
  
