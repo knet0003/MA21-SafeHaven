@@ -45,28 +45,35 @@
                 let isi = arr.indexOf(Math.max(...arr));
                 if(maxItem>=1){
                     if (maxItem==1){
-                        danger= "The severity of your situation is: &#9733;<br>It is <strong>not clear</strong> whether you are in an abusive relationship or not. ";
+                        danger= "Level of abuse: ●○○○○<br>There might be a chance that you are facing abuse. Most relationships have their up and downs, but there are some times relationships end up abusive without you knowing. To have a better picture about what domestic violence is about, check out our information page here: <br> <p><a href='https://safehaven.ga/information' class='button' target='_blank'>Information</a></p> ";
 
                     } else{
                     serv.style.display = 'block';
                     if(maxItem==financialItems){
-                        kind+="<br> Based of your selection you may be a victim of <strong> financial abuse</strong>, if your partner: <li> Prevents you from accessing your own money, benefits or assets <li> Takes out a loan that would affect you without your consent <li> Puts pressure on you in connection with loans, property or financial transactions<li> Denying assistance to manage/monitor financial affairs <li> Denying assistance to access benefits  <li> Misuse of any personal allowance, benefits or direct payments <li> False representation or using your bank account, cards or documents without you knowing<br> ";
+                        kind+="<br> Based of your selection you may be a victim of <strong> financial abuse</strong>, if your partner: <li> Prevents you from accessing your own money, benefits or assets <li> Takes out a loan that would affect you without your consent <li> Puts pressure on you in connection with loans, property or financial transactions<li> Denies assistance to manage/monitor financial affairs <li> Denies assistance to access benefits  <li> Misuses any personal allowance, benefits or direct payments <li> Falsely represents or uses your bank account, cards or documents without you knowing<br> ";
                     }
                     if(maxItem==physicalItems){
-                    kind+="<br> Based on your selection you may be a victim of <strong> physical abuse</strong>, if you partner: <li>Restricts your movements (prevents you from attending work or school, controls what you do.<li>Harms other people or animals in the your life.<li>Makes you feel be in fear of disagreeing with your partner.<li>Forces you to drink alcohol or take drugs.<br> ";
+                    kind+="<br> Based on your selection you may be a victim of <strong> physical abuse</strong>, if your partner: <li>Restricts your movements (prevents you from attending work or school, controls what you do).<li>Harms other people or animals in the your life.<li>Makes you feel be in fear of disagreeing with your partner.<li>Forces you to drink alcohol or take drugs.<br> ";
                     }
                     if (maxItem==pychologicalItems){
-                    kind+="<br> Based of your selection you may be a victim of <strong> psychological abuse</strong>, if your partner: <li>Repeatedly gives you destructive criticism, verbal threats and browbeating.<li>Always claims to be right.<li>Excludes you from making decisions .<li>Does not respect your privacy. <li>Abuses your trust by lying, hiding important information and papers, cheating or being inappropriately jealous.<br> ";
+                    kind+="<br> Based of your selection you may be a victim of <strong> psychological abuse</strong>, if your partner: <li>Repeatedly gives you destructive criticism, verbal threats and browbeating.<li>Always claims to be right.<li>Excludes you from making decisions.<li>Does not respect your privacy. <li>Abuses your trust by lying, hiding important information and papers, cheating or being inappropriately jealous.<br> ";
                     }
                      if (maxItem==verbalItems){
                     kind+=" <br> Based on your selection you may be a victim of <strong>verbal abuse</strong>, if your partner:<li> Makes remarks that are meant to make you feel bad about yourself and are not constructive, but deliberate and hurtful<li> Insults or attempts to humiliate you. Then they accuse you of being overly sensitive or say that it was a joke and you have no sense of humor.<li> Frequently yells or screams at you.<li> Blames you for starting arguments, when it was not the case.<li>Uses derogatory language, or insults that lowers your self-esteem, sense of self-worth, and self-concept.<br> ";
                     }
-                    if (maxItem>=2 && maxItem<=3){
-                        danger= "<br>The severity of your situation is: &#9733;&#9733; <br> It it <strong>likely</strong> that you are in an abusive relationship with your partner.";
+                    if (maxItem==2){
+                        danger= "<br>Level of abuse: ●●○○○ <br> Based on your answers, it is <strong>likely</strong> that you are in an abusive relationship with your partner.";
                     }
-                    if (maxItem>=4){
-                        danger= "<br></br>The severity of your situation is: &#9733;&#9733;&#9733;<br> You are <strong>extremely likely</strong> to be in an abusive relationship.";
-                    }}
+                    if (maxItem==3){
+                        danger= "<br>Level of abuse: ●●●○○<br> Based on your answers, it it <strong>likely</strong> that you are in an abusive relationship with your partner.";
+                    }
+                    if (maxItem==4){
+                        danger= "<br>Level of abuse: ●●●●○<br> Based on your answers, you are <strong>extremely likely</strong> to be in an abusive relationship with your partner.";
+                    }
+                    if (maxItem==5){
+                        danger= "<br>Level of abuse: ●●●●●<br> Based on your answers, you are <strong>extremely likely</strong> to be in an abusive relationship with your partner.";
+                    }
+                }
                 } else{
                    kind+="You have not made any selections.";
                 }
@@ -95,14 +102,17 @@
                 width: 180px;
             }
             p {
-               margin: 5px; 
+               margin: 8px; 
             }
             div.services {
                 margin: auto;
                 width:70%;
-                padding: 10px;
+                padding: 25px;
                 background-color: #FFFFFF;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            button {
+                background-color: #6EC1E4;
             }
         </style>
 	</head>
@@ -134,9 +144,9 @@
     <br>
 	<input type="checkbox" class="checkbox" name="verbal" ><label for="checkbox">Criticize you?</label>
     <br>
-	<input type="checkbox" class="checkbox" name="verbal" ><label for="checkbox">They yell, scream, or swear at you ?</label>
+	<input type="checkbox" class="checkbox" name="verbal" ><label for="checkbox">Yelled, screamed, or swore at you?</label>
     <br>
-	<input type="checkbox" class="checkbox" name="verbal" ><label for="checkbox">Make threats to you?</label>
+	<input type="checkbox" class="checkbox" name="verbal" ><label for="checkbox">Made threats to you?</label>
     <br>
 	<input type="checkbox" class="checkbox" name="financial" ><label for="checkbox">Stole your money or possessions?</label>
     <br>
@@ -160,9 +170,9 @@
         <p><a href="https://safehaven.ga/services" class="button" target="_blank">Services</a></p>
         <p>Or you can choose to develop a self-care routine.</p>
         <p><a href="https://safehaven.ga/self-care" class="button" target="_blank">Self-care routine</a></p>
-        <br></div>
+        <br>
     </div>
-</div>
+    </div>
 
 
 </body>
